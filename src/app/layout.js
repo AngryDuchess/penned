@@ -1,7 +1,6 @@
-import  { inter } from "./fonts"
+import { inter } from "./fonts";
 import "./globals.css";
-
-
+import { BlogProvider } from "@/context/blog-context";
 
 export const metadata = {
   title: "Blog App",
@@ -11,10 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className}`}
-      >
-        {children}
+      <body className={`${inter.className}`}>
+        <BlogProvider>{children}</BlogProvider>
       </body>
     </html>
   );

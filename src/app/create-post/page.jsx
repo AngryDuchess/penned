@@ -41,7 +41,6 @@ export default function CreatePost() {
     const newPost = { id, title, blogdetails, blogImage };
     const updatedPosts = [...existingPosts, newPost];
 
-
     setTimeout(() => {
       localStorage.setItem("blog_post", JSON.stringify(updatedPosts));
       router.push("/");
@@ -98,7 +97,6 @@ export default function CreatePost() {
               value={title}
               onChange={handleTitleChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-             
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -128,7 +126,6 @@ export default function CreatePost() {
               value={blogdetails}
               onChange={handleDetailsChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-              
             />
           </div>
         </main>

@@ -25,22 +25,21 @@ export default function BlogDetails() {
   }
   return (
     <>
-    <div className="flex justify-between">
-
-      <Link
-        href="/"
-        className="mx-4 md:mx-40  flex gap-3 py-2 px-3 rounded-lg font-semibold text-sm w-24 text-gray-400 hover:text-pink-500"
+      <div className="flex justify-between">
+        <Link
+          href="/"
+          className="mx-4 md:mx-40  flex gap-3 py-2 px-3 rounded-lg font-semibold text-sm w-24 text-gray-400 hover:text-pink-500"
         >
-        <ArrowLeft size={20} />
-        Back
-      </Link>
-      <button
-        onClick={handleEdit}
-        className="mx-4 md:mx-40 py-2 px-3  bg-violet-800  rounded-lg font-semibold text-sm text-center w-24 hover:bg-violet-800/80 hover:underline"
+          <ArrowLeft size={20} />
+          Back
+        </Link>
+        <button
+          onClick={handleEdit}
+          className="mx-4 md:mx-40 py-2 px-3  bg-violet-800  rounded-lg font-semibold text-sm text-center w-24 hover:bg-violet-800/80 hover:underline"
         >
-        Edit
-      </button>
-        </div>
+          Edit
+        </button>
+      </div>
       <div className="px-4 md:px-40 py-8 flex flex-col justify-center items-center  gap-8">
         <div className="flex flex-col gap-3 items-center">
           <p>{getDateCreated()}</p>

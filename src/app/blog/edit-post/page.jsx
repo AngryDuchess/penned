@@ -1,24 +1,23 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowLeft,InfoCircle } from 'iconsax-react';
-import { BeatLoader } from 'react-spinners';
+"use client";
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, InfoCircle } from "iconsax-react";
+import { BeatLoader } from "react-spinners";
 
 const EditPost = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const id = searchParams.get('id');
-  const [title, setTitle] = useState('');
-  const [blogdetails, setBlogDetails] = useState('');
+  const id = searchParams.get("id");
+  const [title, setTitle] = useState("");
+  const [blogdetails, setBlogDetails] = useState("");
   const [blogImage, setBlogImage] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-
   useEffect(() => {
-    const existingPosts = JSON.parse(localStorage.getItem('blog_post')) || [];
-    const postToEdit = existingPosts.find(post => post.id === parseInt(id));
+    const existingPosts = JSON.parse(localStorage.getItem("blog_post")) || [];
+    const postToEdit = existingPosts.find((post) => post.id === parseInt(id));
     if (postToEdit) {
       setTitle(postToEdit.title);
       setBlogDetails(postToEdit.blogdetails);
@@ -49,20 +48,20 @@ const EditPost = () => {
     e.preventDefault();
     if (title === "" || blogdetails === "" || !blogImage) {
       setError(true);
-      setLoading(false)
+      setLoading(false);
       return;
     }
 
-    const existingPosts = JSON.parse(localStorage.getItem('blog_post')) || [];
-    const updatedPosts = existingPosts.map(post => {
+    const existingPosts = JSON.parse(localStorage.getItem("blog_post")) || [];
+    const updatedPosts = existingPosts.map((post) => {
       if (post.id === parseInt(id)) {
         return { ...post, title, blogdetails, blogImage };
       }
       return post;
     });
 
-    localStorage.setItem('blog_post', JSON.stringify(updatedPosts));
-    router.push('/');
+    localStorage.setItem("blog_post", JSON.stringify(updatedPosts));
+    router.push("/");
   };
 
   return (
@@ -114,7 +113,6 @@ const EditPost = () => {
               value={title}
               onChange={handleTitleChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-             
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -144,7 +142,6 @@ const EditPost = () => {
               value={blogdetails}
               onChange={handleDetailsChange}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-              
             />
           </div>
         </main>

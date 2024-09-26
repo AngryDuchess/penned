@@ -20,16 +20,13 @@ export default function Home() {
   }
   return (
     <>
-      <header className="flex items-center justify-center py-14">
-        <Polkadot size="32" color="#FF8A65" />
-      </header>
       <main className="px-1 w-full">
-        <div className="flex flex-col gap-6 items-center justify-center py-14">
+        <div className="flex flex-col gap-6 items-center justify-center py-8">
           <div className="flex flex-col gap-3 text-center">
             <h1 className="text-gradient text-3xl font-bold bg-gradient-to-r from-violet-800  via-pink-500 to-yellow-400">
               BLOG POSTS
             </h1>
-            <p>While you're here, browse through my blog posts</p>
+            <p>While you&apos;re here, browse through your blog posts</p>
           </div>
           <Link
             href="/create-post"
@@ -39,7 +36,7 @@ export default function Home() {
             Write
           </Link>
           {blogs.length === 0 ? (
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center py-8 px-8 gap-3">
               <Image
                 className="rounded-2xl"
                 src={gif}
@@ -47,7 +44,7 @@ export default function Home() {
                 height={120}
                 alt="an illustration of a hand writing"
               />
-              <p>No blog posts available</p>
+              <p>Oh look!..you have none...yet</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-auto">

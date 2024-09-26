@@ -16,7 +16,7 @@ export default function Modal({ isOpen, onClose, deletPost }) {
             />
         
         <h1 className="text-xl font-bold">Delete Post?</h1>
-        <p className="text-gray-400">This can't be undone.</p>
+        <p className="text-gray-400">This can&apos;t be undone.</p>
         <div className="flex gap-4 items-end justify-end">
         <button
             onClick={onClose}

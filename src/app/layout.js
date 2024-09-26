@@ -5,7 +5,7 @@ import { BlogProvider } from "@/context/blog-context";
 import { Polkadot } from "iconsax-react";
 
 export const metadata = {
-  title: "Blog App",
+  title: "Penned",
   description: "A blog app",
 };
 

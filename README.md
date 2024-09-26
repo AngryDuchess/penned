@@ -11,10 +11,10 @@
 - [License](#license)
 
 ## Introduction
-PENNED is a simple and elegant blog application built with Next.js and Tailwind CSS. It allows users to create, read and delete blog posts with ease.
+PENNED is a simple and elegant blog application built with Next.js and Tailwind CSS. It allows users to create, read, update and delete blog posts with ease.
 
 ## Features
-- Create, read and delete blog posts
+- Create, read, update and delete blog posts
 - Responsive design
 - Local storage for saving posts
 

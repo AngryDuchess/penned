@@ -7,7 +7,7 @@ import { getDateCreated } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft } from "iconsax-react";
 
-export default function BlogDetails() {
+export default async function BlogDetails() {
   const { selectedBlog } = useBlog();
   const router = useRouter();
   useEffect(() => {
@@ -27,27 +27,25 @@ export default function BlogDetails() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
+    "itemListElement": [
       {
         "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://penned.vercel.app",
+        "position": 1,
+        "item": {
+          "@id": "https://penned.vercel.app",
+          "name": "Blogs"
+        }
       },
       {
         "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: `https://penned.vercel.app/blog/`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Blog",
-        item: `https://penned.vercel.app/blog/${selectedBlog.id}`,
-      },
-    ],
-  };
+        "position": 2,
+        "item": {
+          "@id": "https://penned.vercel.app/blog/12345",
+          "name": "Example Blog Title"
+        }
+      }
+    ]
+  }
   return (
     <>
       <script

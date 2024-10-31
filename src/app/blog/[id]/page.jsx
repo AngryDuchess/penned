@@ -25,15 +25,32 @@ export default function BlogDetails() {
   }
 
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: selectedBlog.title,
-    image: selectedBlog.image,
-    description: selectedBlog.blogdetails,
-  }
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://penned.vercel.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `https://penned.vercel.app/blog/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Blog",
+        item: `https://penned.vercel.app/blog/${selectedBlog.id}`,
+      },
+    ],
+  };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

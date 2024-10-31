@@ -46,11 +46,32 @@ export default function BlogDetails() {
       }
     ]
   }
+
+  const blogjsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": selectedBlog.title,
+    "datePublished": selectedBlog.dateCreated,
+    "author": {
+      "@type": "Person",
+      "name": "Hamida Mahama"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Penned",
+      
+    },
+    "image": `https://penned.vercel.app/blog/${selectedBlog.blogImage}`
+  };
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogjsonLd) }}
       />
       <div className="flex justify-between">
         <Link

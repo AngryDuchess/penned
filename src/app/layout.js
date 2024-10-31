@@ -14,9 +14,8 @@ export const metadata = {
     image:
     {
       url: "/images/open-graph-img.png",
-      type: "image/png",
       width: "1200",
-      heigth: "630"
+      height: "630"
     }
   }
 
@@ -25,6 +24,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Penned" />
+        <meta property="og:description" content="A journaling app experiment by Hamida Mahama" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/open-graph-img.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+      </head>
       <body className={`${inter.className}`}>
       <Link href="/" className="flex items-center justify-center py-9">
         <Polkadot size="32" color="#FF8A65" />

@@ -40,8 +40,8 @@ export default async function BlogDetails() {
         "@type": "ListItem",
         "position": 2,
         "item": {
-          "@id": "https://penned.vercel.app/blog/12345",
-          "name": "Example Blog Title"
+          "@id": `https://penned.vercel.app/blog/${selectedBlog.id}`,
+          "name": `${selectedBlog.title}`
         }
       }
     ]

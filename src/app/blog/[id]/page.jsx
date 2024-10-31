@@ -7,7 +7,7 @@ import { getDateCreated } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft } from "iconsax-react";
 
-export default async function BlogDetails() {
+export default function BlogDetails() {
   const { selectedBlog } = useBlog();
   const router = useRouter();
   useEffect(() => {

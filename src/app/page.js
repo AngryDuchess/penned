@@ -18,6 +18,8 @@ export default function Home() {
     setBlogs(updatedBlogs);
     localStorage.setItem("blog_post", JSON.stringify(updatedBlogs));
   }
+
+  
   return (
     <>
       <main className="px-1 w-full">

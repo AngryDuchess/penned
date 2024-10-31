@@ -19,6 +19,7 @@ export const metadata = {
     }
   },
   twitter: {
+    card: "summary",
     card: "summary_large_image",
     site: "@hamida_mahama",
     title: "Penned",
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="630" />
 
         {/* TWITTER CARD */}
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@hamida_mahama" />
         <meta name="twitter:title" content="Penned" />

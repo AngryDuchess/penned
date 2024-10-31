@@ -23,8 +23,20 @@ export default function BlogDetails() {
   if (!selectedBlog) {
     return null;
   }
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: selectedBlog.title,
+    image: selectedBlog.image,
+    description: selectedBlog.blogdetails,
+  }
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="flex justify-between">
         <Link
           href="/"

@@ -6,7 +6,20 @@ import { Polkadot } from "iconsax-react";
 
 export const metadata = {
   title: "Penned",
-  description: "A blog app",
+  description: "A journaling app experiment",
+  openGraph: {
+    title: 'Penned',
+    description: 'A journaling app experiment by Hamida Mahama',
+    type: "website",
+    image:
+    {
+      url: "/images/open-graph-img.png",
+      type: "image/png",
+      width: "1200",
+      heigth: "630"
+    }
+  }
+
 };
 
 export default function RootLayout({ children }) {

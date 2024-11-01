@@ -23,7 +23,6 @@ export default function BlogDetails() {
   if (!selectedBlog) {
     return null;
   }
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -40,8 +39,8 @@ export default function BlogDetails() {
         "@type": "ListItem",
         "position": 2,
         "item": {
-          "@id": `https://penned.vercel.app/blog/${selectedBlog.id}`,
-          "name": `${selectedBlog.title}`
+          "@id": `https://penned.vercel.app/blog/${selectedBlog?.id}`,
+          "name": `${selectedBlog?.title}`
         }
       }
     ]
@@ -50,8 +49,8 @@ export default function BlogDetails() {
   const blogjsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": selectedBlog.title,
-    "datePublished": selectedBlog.dateCreated,
+    "headline": `${selectedBlog?.title}`,
+    "datePublished": "Oct 2024",
     "author": {
       "@type": "Person",
       "name": "Hamida Mahama"
@@ -59,9 +58,8 @@ export default function BlogDetails() {
     "publisher": {
       "@type": "Organization",
       "name": "Penned",
-      
     },
-    "image": `https://penned.vercel.app/blog/${selectedBlog.blogImage}`
+    "image": `https://penned.vercel.app/blog/${selectedBlog?.blogImage}`
   };
   return (
     <>

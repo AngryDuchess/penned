@@ -26,9 +26,9 @@ export const metadata = {
     images: [
       {
         url: "you_url_here",
-        blurDataURL: "/images/twitter-image.png",
-        width: 1024,
-        height: 512,
+        blurDataURL: "https://res.cloudinary.com/dn5ks1ljf/image/upload/v1730476263/Portfolio%20assets/twitter-image_ck5kwj.png",
+        width: 1200,
+        height: 630,
         alt: "twitter card image",
       },
     ],
@@ -51,14 +51,13 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="630" />
 
         {/* TWITTER CARD */}
-        <meta name="twitter:card" content="summary" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@hamida_mahama" />
         <meta name="twitter:title" content="Penned" />
         <meta name="twitter:description" content="A journaling app experiment by Hamida Mahama" />
-        <meta name="twitter:image" content="/images/twitter-image.png" />
-        <meta name="twitter:image:width" content="1024" />
-        <meta name="twitter:image:height" content="512" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dn5ks1ljf/image/upload/v1730476263/Portfolio%20assets/twitter-image_ck5kwj.png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
       </head>
       <body className={`${inter.className}`}>
       <Link href="/" className="flex items-center justify-center py-9">

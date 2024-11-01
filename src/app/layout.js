@@ -27,8 +27,8 @@ export const metadata = {
       {
         url: "you_url_here",
         blurDataURL: "/images/twitter-image.png",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 512,
         alt: "twitter card image",
       },
     ],
@@ -57,6 +57,10 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="Penned" />
         <meta name="twitter:description" content="A journaling app experiment by Hamida Mahama" />
         <meta name="twitter:image" content="/images/twitter-image.png" />
+        <meta name="twitter:image:width" content="1024" />
+        <meta name="twitter:image:height" content="512" />
+
+
       </head>
       <body className={`${inter.className}`}>
       <Link href="/" className="flex items-center justify-center py-9">

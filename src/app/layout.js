@@ -13,7 +13,7 @@ export const metadata = {
     type: "website",
     image:
     {
-      url: "/images/open-graph-image.png",
+      url: "/images/opengraph-image.png",
       width: "1200",
       height: "630"
     }
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Penned" />
         <meta property="og:description" content="A journaling app experiment by Hamida Mahama" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/open-graph-image.png" />
+        <meta property="og:image" content="/images/opengraph-image.png" />
         <meta property="og:image:type" content="" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -59,8 +59,6 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content="/images/twitter-image.png" />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
-
-
       </head>
       <body className={`${inter.className}`}>
       <Link href="/" className="flex items-center justify-center py-9">
